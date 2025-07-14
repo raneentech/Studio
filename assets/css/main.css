@@ -831,13 +831,20 @@ section,
   color: color-mix(in srgb, var(--heading-color), transparent 30%);
 }
 
+.hero h2 {
+  margin: 0 0 25px 0;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 56px;
+}
+
 .hero h1 span {
   color: var(--heading-color);
   border-bottom: 4px solid var(--accent-color);
 }
 
 .hero p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: #FFF;
   margin: 5px 0 30px 0;
   font-size: 22px;
   font-weight: 400;
@@ -894,19 +901,30 @@ section,
 
 @media (max-width: 640px) {
   .hero h1 {
-    font-size: 28px;
+    font-size: 35px;
     line-height: 36px;
+    TEXT-ALIGN: center;
+  }
+.hero h2 {
+    font-size: 25px;
+    line-height: 36px;
+    TEXT-ALIGN: CENTER;
   }
 
   .hero p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 24px;
     margin-bottom: 30px;
+    TEXT-ALIGN: center;
   }
 
   .hero .btn-get-started,
   .hero .btn-watch-video {
     font-size: 13px;
+  }
+  .icon-boxes .d-flex{
+   display: flex !important;
+  flex-wrap: wrap; /* هذا هو الحل */
   }
 }
 
@@ -1040,6 +1058,7 @@ section,
 }
 
 .about .icon-box {
+  margin: 0px 0 25px 0;
   background-color: var(--surface-color);
   padding: 50px 40px;
   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
