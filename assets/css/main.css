@@ -1004,6 +1004,7 @@ section,
 --------------------------------------------------------------*/
 .about {
   padding-top: 100px;
+  DIRECTION: RTL;
 }
 
 .about .content h3 {
@@ -1777,3 +1778,29 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/*--------------------------------------------------------------
+# Starter Section Section
+--------------------------------------------------------------*/
+
+.swiper {
+      width: 100%;
+      padding: 20px 0;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      border-radius: 12px;
+      padding: 10px;
+      height: 100px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .swiper-slide img {
+      max-height: 80px;
+      max-width: 100%;
+      object-fit: contain;
+    }
