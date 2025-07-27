@@ -852,6 +852,7 @@ section,
 }
 
 .hero .btn-get-started {
+  MARGIN-RIGHT: 10PX;
   color: var(--contrast-color);
   background: var(--accent-color);
   font-family: var(--heading-font);
@@ -863,6 +864,29 @@ section,
   padding: 10px 28px 12px 28px;
   border-radius: 50px;
   transition: 0.5s;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+
+.icon-box .btn-get-started {
+  margin-top: 20px;
+  MARGIN-RIGHT: 0PX;
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-family: var(--heading-font);
+  font-family: "Tajawal", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px 12px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+
+.icon-box .btn-get-started:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
 }
 
@@ -1028,7 +1052,7 @@ section,
 }
 
 .about .content .read-more {
-  background: #42c38b;
+  background: #2f8eb5;
   color: var(--contrast-color);
   font-family: var(--heading-font);
   font-family: "Tajawal", sans-serif;
