@@ -117,13 +117,7 @@
           </div>
         </div>
 
-        <svg
-          class="hero-waves"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          viewBox="0 24 150 28 "
-          preserveAspectRatio="none"
-        >
+        <svg class="hero-waves"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 24 150 28 "  preserveAspectRatio="none" >
           <defs>
             <path
               id="wave-path"
@@ -142,6 +136,85 @@
         </svg>
       </section>
       <!-- /Hero Section -->
+  <!--  opportunities Section -->
+  
+  <section class="opportunities-section">
+  <div class="container">
+    <div class="container section-title" data-aos="fade-up">
+      <h2>فرص التنمية</h2>
+      <div>
+        <span>فرص تنموية شبابية</span>
+        <span class="description-title"></span>
+      </div>
+    </div>
+
+    <!-- غيّرنا من row-cols-md-3 إلى row-cols-md-2 -->
+    <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+
+      <!-- بطاقة 1: فيديو يوتيوب بدل الصورة -->
+      <div class="col">
+        <div class="card opportunity-card">
+          <div class="ratio ratio-16x9 position-relative video-placeholder"
+               data-yt="p1_WpP8aj2I"
+               data-title="روزنامة الأندية الشبابية الصيفية"
+               data-autoplay="1"
+               style="background-image:url('assets/img/poster-1.jpg');">
+            <button class="yt-play-btn" aria-label="تشغيل الفيديو"></button>
+          </div>
+
+          <span class="opportunity-status-label status-ongoing">جارية</span>
+          <div class="card-body">
+            <h5 class="card-title">استديو 360</h5>
+            <p>
+                        360 مهمة" الذي يركز على دعم المبادرات الناشئة من خلال
+                        رحلة تشمل إنجاز 360 مهمة تؤهلهم للإطلاق الناجح وتحقيق
+                        النمو المستدام.
+                      </p>
+            <div class="btn-group" role="group" aria-label="أزرار الفرصة 1">
+              <a href="https://linksshortcut.com/qCwjq" class="btn btn-primary">تسجيل مسار المبادرات</a>
+              <a href="https://drive.google.com/file/d/1HCvOihaEcrGHCPbjKl7Sovd5sc492tq5/view?usp=sharing" target="_blank" class="btn btn-outline-secondary">الدليل التعريفي</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- بطاقة 2: فيديو يوتيوب بدل الصورة -->
+      <div class="col">
+        <div class="card opportunity-card">
+          <div class="ratio ratio-16x9 position-relative video-placeholder"
+               data-yt="p1_WpP8aj2I"
+               data-title="وجهة | رحلات مهنية متخصصة"
+               data-autoplay="1"
+               style="background-image:url('assets/img/poster-2.jpg');">
+            <button class="yt-play-btn" aria-label="تشغيل الفيديو"></button>
+          </div>
+
+          <span class="opportunity-status-label status-ongoing">جارية</span>
+          <div class="card-body">
+            <h5 class="card-title">استديو تمكين</h5>
+                      <p>
+                        يستهدف تمكين الجمعيات الشبابية القائمة من خلال سد
+                        الفجوات في أدائها وتقديم الدعم المتخصص عبر التعلم
+                        العملي، الإرشاد (الكوتشينج)، والمشاريع التطبيقية
+                      </p>
+            <div class="btn-group" role="group" aria-label="أزرار الفرصة 2">
+              <a href="https://forms.office.com/r/7fK1QfrzWT" class="btn btn-primary">تسجيل الكيانات </a>
+              <a href="https://drive.google.com/file/d/1HCvOihaEcrGHCPbjKl7Sovd5sc492tq5/view?usp=sharing" target="_blank" class="btn btn-outline-secondary">الدليل التعريفي</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- إن احتجت بطاقة ثالثة لاحقًا، انسخ إحدى البطاقتين وعدّل الـ VIDEO_ID والبوستر -->
+      <!--
+      <div class="col"> ... </div>
+      -->
+
+    </div>
+  </div>
+</section>
+
+      <!-- End About Section -->
 
       <!-- About Section -->
       <section id="asidio126" class="about section">
@@ -493,6 +566,31 @@
 
     <!-- Preloader -->
     <div id="preloader"></div>
+
+    <script>
+  document.addEventListener('click', function(e){
+    const btn = e.target.closest('.yt-play-btn');
+    if(!btn) return;
+
+    const holder = btn.parentElement;
+    const videoId = holder.getAttribute('data-yt');
+    const title = holder.getAttribute('data-title') || 'YouTube video';
+    const autoplay = holder.getAttribute('data-autoplay') === '1' ? 1 : 0;
+
+    const iframe = document.createElement('iframe');
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.setAttribute('title', title);
+    iframe.setAttribute('frameborder', '0');
+    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+    iframe.src = `https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&autoplay=${autoplay}`;
+
+    // ملء مساحة .ratio-16x9
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+
+    holder.replaceChildren(iframe);
+  }, false);
+</script>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
